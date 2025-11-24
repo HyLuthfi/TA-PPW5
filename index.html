@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="header">
+                <h2>Calculator</h2>
+                <div class="header-buttons">
+                    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">🌓</button>
+                    <button class="history-toggle" onclick="toggleHistory()">☰</button>
+                </div>
+            </div>
+
+            <div class="display-section">
+                <div class="expression" id="expression"></div>
+                <div class="display" id="display">0</div>
+            </div>
+
+            <div class="memory-buttons">
+                <button onclick="memoriHapus()" class="mem-btn">MC</button>
+                <button onclick="memoriPanggil()" class="mem-btn">MR</button>
+                <button onclick="memoriTambah()" class="mem-btn">M+</button>
+                <button onclick="memoriKurang()" class="mem-btn">M-</button>
+                <button onclick="memoriSimpan()" class="mem-btn">MS</button>
+                <div class="memory-indicator" id="memoryIndicator"></div>
+            </div>
+
+            <div class="buttons">
+                <button onclick="hapusEntry()" class="function-btn">CE</button>
+                <button onclick="hapusSemua()" class="function-btn">C</button>
+                <button onclick="backspace()" class="function-btn">⌫</button>
+                <button onclick="inputOperasi('/')" class="operator-btn">÷</button>
+
+                <button onclick="inputAngka('7')" class="number-btn">7</button>
+                <button onclick="inputAngka('8')" class="number-btn">8</button>
+                <button onclick="inputAngka('9')" class="number-btn">9</button>
+                <button onclick="inputOperasi('*')" class="operator-btn">×</button>
+
+                <button onclick="inputAngka('4')" class="number-btn">4</button>
+                <button onclick="inputAngka('5')" class="number-btn">5</button>
+                <button onclick="inputAngka('6')" class="number-btn">6</button>
+                <button onclick="inputOperasi('-')" class="operator-btn">−</button>
+
+                <button onclick="inputAngka('1')" class="number-btn">1</button>
+                <button onclick="inputAngka('2')" class="number-btn">2</button>
+                <button onclick="inputAngka('3')" class="number-btn">3</button>
+                <button onclick="inputOperasi('+')" class="operator-btn">+</button>
+
+                <button onclick="toggleTanda()" class="number-btn">±</button>
+                <button onclick="inputAngka('0')" class="number-btn">0</button>
+                <button onclick="inputDesimal()" class="number-btn">.</button>
+                <button onclick="hitung()" class="equals-btn">=</button>
+            </div>
+        </div>
+
+        <div class="history-panel" id="historyPanel">
+            <div class="history-header">
+                <h3>History</h3>
+                <button onclick="hapusRiwayat()" class="clear-history-btn">Clear</button>
+            </div>
+            <div class="history-list" id="historyList">
+                <p class="no-history">Tidak ada riwayat</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
